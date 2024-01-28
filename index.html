@@ -19,26 +19,24 @@
             font-family: 'HelveticaBQ-Light', sans-serif;
             margin: 0;
             padding: 0;
-            height: 100%;
             display: flex;
             flex-direction: column;
-            overflow: hidden;
             position: relative;
         }
 
         video {
-            position: fixed;
+            position: fixed;  /* Change position to fixed */
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
-            z-index: -1;
+            z-index: -1;  /* Ensure the video stays in the background */
         }
 
         /* Dark Overlay */
         .dark-overlay {
-            position: fixed;
+            position: fixed;  /* Adjust position to fixed */
             top: 0;
             left: 0;
             width: 100%;
@@ -81,7 +79,7 @@
 
         .tagline {
             font-size: 1.2em;
-            margin-bottom: 15px;
+            margin-bottom: 30px;
             color: white; /* Set tagline text color to white */
         }
 
@@ -110,22 +108,19 @@
             background-color: cyan;
         }
 
-        /* BODY2 Section */
-        .body2-section {
-            display: flex;
-            flex-direction: column; /* Change flex direction to column */
-            align-items: center;
-            justify-content: center;
-            flex-grow: 1;
-            padding: 20px;
-            text-align: center; /* Center the text */
-            color: white;
-            z-index: 1; /* Ensure the content is on top of the video */
-        }
+     /* BODY2 Section */
+.body2-section {
+    display: flex;
+    flex-direction: column; /* Change flex direction to column */
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 20px;
+    text-align: center; /* Center the text */
+    color: white;
+    z-index: 1; /* Ensure the content is on top of the video */
+}
 
-        .playlist-iframe {
-            margin-bottom: 20px; /* Add gap between Spotify playlists */
-        }
 
         /* FOOTER Section */
         .footer-section {
@@ -154,30 +149,6 @@
             height: auto;
             margin-right: 20px;
             z-index: 1; /* Ensure the image is on top of the video */
-        }
-
-        /* Media Queries for Mobile */
-        @media only screen and (max-width: 600px) {
-            .body-section {
-                text-align: center;
-            }
-
-            .tagline {
-                font-size: 1em;
-                margin-bottom: 10px;
-            }
-
-            .links a {
-                padding: 8px 16px;
-            }
-
-            .body2-section {
-                text-align: center;
-            }
-
-            .icons a {
-                font-size: 20px;
-            }
         }
     </style>
 </head>
@@ -213,11 +184,12 @@
     <!-- BODY2 Section -->
     <div class="body2-section">
         <!-- Content for Body2 -->
-        <h1>PLAYLISTS</h1>
+  <h1>PLAYLISTS</h1>
 
-        <iframe class="playlist-iframe" style="border-radius: 12px" src="https://open.spotify.com/embed/playlist/7g0PG8OgGHx0R2pGcFX67U?utm_source=generator&theme=0" width="300" height="76" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+ <iframe style="border-radius:12px; margin-bottom: 20px;" src="https://open.spotify.com/embed/playlist/7g0PG8OgGHx0R2pGcFX67U?utm_source=generator&theme=0" width="500" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-        <iframe class="playlist-iframe" style="border-radius: 12px" src="https://open.spotify.com/embed/playlist/5QOC9KNG46bdC9HEcigV5B?utm_source=generator" width="300" height="76" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <iframe style="border-radius:12px; margin-bottom: 20px;" src="https://open.spotify.com/embed/playlist/5QOC9KNG46bdC9HEcigV5B?utm_source=generator" width="500" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
 
         <h1>NEXT EVENT</h1>
         <p id="demo"></p>
@@ -227,7 +199,8 @@
             var countDownDate = new Date("Feb 23, 2024 22:00:00").getTime();
 
             // Update the count down every 1 second
-            var x = setInterval(function () {
+            var x = setInterval(function() {
+
                 // Get today's date and time
                 var now = new Date().getTime();
 
@@ -241,9 +214,10 @@
                 var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
                 // Output the result in an element with id="demo"
-                document.getElementById("demo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+                document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s ";
 
-                // If the count down is over, write some text
+                // If the count down is over, write some text 
                 if (distance < 0) {
                     clearInterval(x);
                     document.getElementById("demo").innerHTML = "TBA";
