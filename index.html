@@ -66,21 +66,16 @@
             height: auto;
         }
 
-   .body-section, .body2-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    z-index: 1;
-    margin: 20px 0;
-}
-
-.instagram-feed {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-    z-index: 2;  /* Ensure it appears above background */
-}
+        .body-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+            padding: 20px;
+            text-align: right;
+            margin-top: -10px;
+            z-index: 1;
+        }
 
         .tagline-and-links {
             max-width: 400px;
@@ -192,10 +187,8 @@
             </ul>
         </div>
     </div>
-<!-- Instagram Feed Section -->
-<div class="instagram-feed">
-    <script type="text/javascript" src="https://www.juicer.io/embed/poizeaudio/embed-code.js" async defer></script>
-</div>
+<script type="text/javascript" src="https://www.juicer.io/embed/poizeaudio/embed-code.js" async defer></script>
+    <div class="body2-section">
         <h1>PLAYLISTS</h1>
         <iframe style="border-radius:12px; margin-bottom: 20px;" src="https://open.spotify.com/embed/playlist/7g0PG8OgGHx0R2pGcFX67U?utm_source=generator&theme=0" width="500" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         <iframe style="border-radius:12px; margin-bottom: 20px;" src="https://open.spotify.com/embed/playlist/5QOC9KNG46bdC9HEcigV5B?utm_source=generator" width="500" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
